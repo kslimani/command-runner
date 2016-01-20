@@ -1,0 +1,23 @@
+{
+  "author": "kslimani",
+  "name": "command-runner",
+  "version": "0.1.0",
+  "description": "Simple command runner.",
+  "license": "MIT",
+  "dependencies": {
+    "async": "1.5.2",
+    "command-line-args": "2.1.4"
+  },
+  "devDependencies": {
+    "david": "7.0.0",
+    "jscs": "2.8.0",
+    "jsdoc": "3.4.0"
+  },
+  "scripts": {
+    "docs": "jsdoc -r ./lib -d ./docs"
+  },
+  "bin": {
+    "cr": "./bin/command-runner.js"
+  },
+  "main": "./lib/AsyncRunner.js"
+}
