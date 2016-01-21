@@ -1,9 +1,14 @@
 {
   "author": "kslimani",
   "name": "command-runner",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple command runner.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/playmedia/command-runner.git"
+  },
+  "homepage": "https://github.com/playmedia/command-runner",
   "dependencies": {
     "async": "1.5.2",
     "command-line-args": "2.1.4"
@@ -14,7 +19,8 @@
     "jsdoc": "3.4.0"
   },
   "scripts": {
-    "docs": "jsdoc -r ./lib -d ./docs"
+    "cs": "jscs lib/",
+    "docs": "jsdoc --recurse ./lib --readme README.md --destination ./docs"
   },
   "bin": {
     "cr": "./bin/command-runner.js"
