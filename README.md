@@ -1,5 +1,7 @@
 # command-runner
 
+[![Dependency Status](https://david-dm.org/playmedia/command-runner.svg)](https://david-dm.org/playmedia/command-runner)
+
 A simple command runner, inspired from [Whiskey process runner](https://github.com/cloudkick/whiskey/blob/master/PROCESS_RUNNER.md).
 
 ## installation
