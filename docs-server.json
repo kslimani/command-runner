@@ -1,0 +1,29 @@
+{
+  "http-server": {
+    "depends": [ "docs" ],
+    "cmd": [ "http-cli", "-a", "127.0.0.1", "-p", "8080", "-r", "docs" ],
+    "wait": {
+      "type": "socket",
+      "options": {
+        "host": "127.0.0.1",
+        "port": "8080",
+        "timeout": "3000"
+      }
+    },
+    "log": {
+      "type": "output"
+    }
+  },
+  "docs": {
+    "cmd": [ "npm", "run", "docs" ],
+    "wait": {
+      "type": "done",
+      "options": {
+        "timeout": "10000"
+      }
+    },
+    "log": {
+      "type": "output"
+    }
+  }
+}
