@@ -1,7 +1,5 @@
 # command-runner
 
-[![Dependency Status](https://david-dm.org/playmedia/command-runner.svg)](https://david-dm.org/playmedia/command-runner)
-
 A simple command runner, inspired from [Whiskey process runner](https://github.com/cloudkick/whiskey/blob/master/PROCESS_RUNNER.md).
 
 ## installation
@@ -105,7 +103,7 @@ __Example configuration file :__
 
 | Name | Type | Required | Description |
 | :--- | :--: | :------: | :---------- |
-| type | string | yes | The wait condition type : `output`, `socket` or `timer`. |
+| type | string | yes | The wait condition type : `output`, `socket`, `done`, or `timer`. |
 | options | Object | no | The wait condition options. |
 
 `output`: wait for an output string (stdout and stderr) to match using the following options :
@@ -123,6 +121,12 @@ __Example configuration file :__
 | host | string | no | The hostname or ip address. Default is `localhost` |
 | timeout | number | no | The wait timeout in milliseconds. Default is `10000`. |
 | interval | number | no | The connect retry interval in milliseconds. Default is `200`. |
+
+`done`: wait for a process to run and exit with success code using the following options :
+
+| Name | Type | Required | Description |
+| :--- | :--: | :------: | :---------- |
+| timeout | number | no | The wait timeout in milliseconds. Must be greater than or equal to 100. |
 
 `timer`: wait for a timer duration using the following options :
 
