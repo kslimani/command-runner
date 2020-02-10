@@ -1,20 +1,34 @@
 #!/usr/bin/env node
-var AsyncRunner = require('../lib/AsyncRunner')
-var commandLineArgs = require('command-line-args')
+const AsyncRunner = require('../lib/AsyncRunner')
+const commandLineArgs = require('command-line-args')
+const commandLineUsage = require('command-line-usage')
 
-var cli = commandLineArgs([
+var optionList = [
   {name: 'help', alias: 'h', type: Boolean, description: 'Display this usage help.'},
   {name: 'config', alias: 'c', type: String, description: 'The JSON configuration filepath.', defaultValue: null},
   {name: 'debug', alias: 'd', type: Boolean, description: 'Enable debug output.', defaultValue: false},
-])
+]
 
-var options = cli.parse()
+var options = {}
+
+try {
+  options = commandLineArgs(optionList)
+} catch (e) {
+  // Assume e is UNKNOWN_OPTION error
+  options.help = true
+}
 
 if (options.help || options.config === null) {
-  console.log(cli.getUsage({
-    title: 'command-runner',
-    description: 'Run a set of commands.',
-  }))
+  console.log(commandLineUsage([
+    {
+      header: 'command-runner',
+      content: 'Run a set of commands.',
+    },
+    {
+      header: 'Options',
+      optionList: optionList,
+    }
+  ]))
   process.exit()
 }
 
