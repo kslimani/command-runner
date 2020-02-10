@@ -12,6 +12,7 @@
   },
   "scripts": {
     "docs": "jsdoc --recurse ./lib --readme README.md --destination ./docs",
+    "docs:serve": "node bin/command-runner.js -c docs-server.json",
     "lint": "eslint bin/**/*.js lib/**/*.js"
   },
   "dependencies": {
