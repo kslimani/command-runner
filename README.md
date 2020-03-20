@@ -2,15 +2,15 @@
 
 A simple command runner, inspired from [Whiskey process runner](https://github.com/cloudkick/whiskey/blob/master/PROCESS_RUNNER.md).
 
-## installation
+## Installation
 
 ```sh
 npm install -g command-runner
 ```
 
-This will install the command-runner module globally and add the 'cr' cli tool to your PATH.
+This will install the command-runner module globally and add the `cr`  cli tool to your PATH.
 
-## use
+## Usage
 
 ```sh
 cr --config filename.json [--debug]
