@@ -16,13 +16,13 @@
     "lint": "eslint bin/**/*.js lib/**/*.js"
   },
   "dependencies": {
-    "async": "^3.1.1",
-    "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.1.0"
+    "async": "^3.2.3",
+    "command-line-args": "^5.2.1",
+    "command-line-usage": "^6.1.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^8.11.0",
     "http-cli": "^2.1.0",
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.10"
   }
 }
